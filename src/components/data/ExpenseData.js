@@ -30,7 +30,7 @@ const ExpenseData = () => {
       {expenses.map((expense) => {
         return (
           <Card classNames="expenses">
-            <ExpenseItem {...expense} />
+            <ExpenseItem {...expense} key={expense.id}/>
           </Card>
         );
       })}
