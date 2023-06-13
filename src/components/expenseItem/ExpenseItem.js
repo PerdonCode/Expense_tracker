@@ -1,14 +1,12 @@
 import React from "react";
-import "./ExpenseItem.css"
+import "./ExpenseItem.css";
+import ExpenseDate from "./ExpenseDate";
 // function always has to start with a Capital
-const ExpenseItem = (props) => {
-
-    const {title, amount, date} = props;
-
+const ExpenseItem = ({ title, amount, date }) => {
   return (
     <div className="expense-item">
-        {/* set date to string otherwise it will give an error */}
-      <div>{date.toISOString()}</div>
+      {/* set date to string otherwise it will give an error */}
+      <ExpenseDate date={date} />
       <div className="expense-item_description">
         <h2>{title}</h2>
         <div className="expense-item__price">{amount}</div>
