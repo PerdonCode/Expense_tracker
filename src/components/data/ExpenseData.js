@@ -1,5 +1,7 @@
 import React from "react";
 import ExpenseItem from "../expenseItem/ExpenseItem";
+import Card from "../Card/Card";
+import "./Expenses.css"
 
 const ExpenseData = () => {
   const expenses = [
@@ -23,12 +25,13 @@ const ExpenseData = () => {
       date: new Date(2021, 5, 12),
     },
   ];
-  return(
+  return (
     <div>
       {expenses.map((expense) => {
         return (
-          <ExpenseItem {...expense}
-          />
+          <Card classNames="expenses">
+            <ExpenseItem {...expense} />
+          </Card>
         );
       })}
     </div>
