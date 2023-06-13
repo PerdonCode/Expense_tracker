@@ -6,14 +6,14 @@ import { useState } from "react";
 // function always has to start with a Capital
 
 const ExpenseItem = ({ title, amount, date }) => {
-  // cant call in nested function 
-  // why const? 
-  // must use [] because it retunds an element with 2 objects
-  const [newTitle, setNewTitle] = useState('');
+  // cant call in nested function
+  // why const? it is per component instance based
+  // must use [] because it returns an element with 2 objects
+  const [newTitle, setNewTitle] = useState("");
 
   const handleOnClick = () => {
-    setNewTitle('Updated!');
-  }
+    setNewTitle("Updated!");
+  };
 
   return (
     <Card className="expense-item">
