@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./ExspenseForm.css";
 
-const ExspenseForm = () => {
+const ExspenseForm = (props) => {
      const [enteredTitle, setEnteredTitle] = useState('');
      const [enteredAmount, setEnteredAmount] = useState(0);
      const [enteredDate, setEnteredDate] = useState('2023-01-01');
@@ -47,7 +47,9 @@ const ExspenseForm = () => {
             amount: enteredAmount,
             date: new Date(enteredDate)
         }
-        console.log(ExpenseData);
+       props.onSaveExpenseData(ExpenseData);
+
+        // two way binding
         // after getting the values set intital value back to an empty string
         // use value={enteredTitle} in the input
         setEnteredTitle('');
