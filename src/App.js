@@ -9,6 +9,7 @@ function App() {
     console.log("in App.js");
     console.log(exspense);
   }
+   // parent  of data/exspenseData.js
   
   return (
     <div className="App">
@@ -19,3 +20,4 @@ function App() {
 }
 
 export default App;
+ 
