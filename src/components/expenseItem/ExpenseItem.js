@@ -9,21 +9,15 @@ const ExpenseItem = ({ title, amount, date }) => {
   // cant call in nested function
   // why const? it is per component instance based
   // must use [] because it returns an element with 2 objects
-  const [newTitle, setNewTitle] = useState("");
-
-  const handleOnClick = () => {
-    setNewTitle("Updated!");
-  };
-
+ 
   return (
     <Card className="expense-item">
       {/* set date to string otherwise it will give an error */}
       <ExpenseDate date={date} />
       <div className="expense-item_description">
-        <h2>{newTitle ? newTitle : title}</h2>
+        <h2>{title}</h2>
         <div className="expense-item__price">{amount}</div>
       </div>
-      <button onClick={handleOnClick}>change title</button>
     </Card>
   );
 };
